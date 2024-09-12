@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+    * {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+    }
+
+    /* Works on Chrome, Edge, and Safari */
+    *::-webkit-scrollbar {
+        width: 5px;
+        border-radius:5px;
+    }
+
+    *::-webkit-scrollbar-track {
+        @apply bg-white
+    }
+
+    *::-webkit-scrollbar-thumb {
+        @apply bg-gradient-to-b from-blue-500 to-red-400 rounded;
+    }
+}
